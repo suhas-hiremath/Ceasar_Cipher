@@ -1,0 +1,24 @@
+<div class="cipher-container">
+    <div class="cipher-card">
+      <h1>Caesar Cipher</h1>
+      <div>
+        <label for="key">Shift Value:</label>
+        <input type="number" id="key" [(ngModel)]="shiftValue">
+      </div>
+      <div>
+        <label for="plainText">Plain Text:</label>
+        <textarea id="plainText" [(ngModel)]="plainText"></textarea>
+      </div>
+      <div>
+        <label for="encryptedText">Encrypted Text:</label>
+        <textarea id="encryptedText" [(ngModel)]="encryptedText"></textarea>
+      </div>
+      <button (click)="encrypt()">Encrypt</button>
+      <button (click)="decrypt()">Decrypt</button>
+      <div *ngIf="decryptedText">
+        <h2>Decrypted Text:</h2>
+        <p>{{ decryptedText }}</p>
+      </div>
+    </div>
+  </div>
+  
